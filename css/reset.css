@@ -1,0 +1,59 @@
+﻿body,
+p,
+ul,
+li,
+ol,
+dl,
+dt, 
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input
+{
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: none;
+}
+
+input,
+button,
+select,
+option {
+    outline: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+    zoom: 1;
+}
+
+.clearfix {
+    zoom: 1;
+    /*为了兼容IE*/
+}
+
+table {
+    border-collapse: collapse;
+}
+
+i {
+    font-style: normal;
+}

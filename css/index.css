@@ -1,0 +1,316 @@
+/*公共的样式*/
+nav {
+    width: 900px;
+    margin: 0 auto;
+}
+
+
+header {
+    width: 100%;
+    background: #8DD8F8;
+    box-shadow: inset -2px -2px 8px rgb(253, 245, 245);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8DD8F8), color-stop(1, #F4FAFD));
+}
+
+header nav .top-nav {
+    text-align: right;
+}
+
+nav a {
+    font-size: 12px;
+}
+
+header nav .box {
+    overflow: hidden;
+}
+
+header nav .box .logo {
+    width: 200px;
+    height: 135px;
+    background: url(../img/bmi-logo.png) no-repeat center / cover;
+    float: left;
+}
+
+header nav .box .text {
+    width: 700px;
+    float: right;
+    padding: 22px 0 0 50px;
+    box-sizing: border-box;
+}
+
+header nav .box h2 {
+    font-size: 20px;
+    color: #444;
+    padding-bottom: 10px;
+}
+
+header nav .box p {
+    color: #666;
+    font-size: 12px;
+}
+
+/*banner*/
+.wrap-box {
+    margin: 20px auto;
+    width: 900px;
+    background: rgb(245, 236, 236);
+}
+
+.banner {
+    border: 1px solid #e6e7e8;
+    height: 278px;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(241,241,241,.5)
+}
+
+.banner:hover {
+    opacity: 0.6;
+}
+
+.wrap-box .banner .arrow {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    background: #FFF;
+    color: #1296db;
+}
+
+.wrap-box .banner .arrow::after {
+    content: '';
+    display: inline-block;
+    background: url(../img/close.svg) no-repeat center 2px / cover;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+}
+
+/*中间内容*/
+.content {
+    width: 900px;
+    /* border: 1px solid red; */
+    margin: 80px auto 0;
+}
+
+.content .form,
+.content .table {
+    width: 50%;
+}
+
+.content .form {
+    float: left;
+}
+
+.content .form .bml {
+    background: orange;
+    margin-bottom: 10px;
+    line-height: 30px;
+    height: 30px;
+    display: none;
+}
+
+.content .form .bml .bml-i {
+    font-size: 25px;
+    float: left;
+    margin-left: 10px;
+    color: #87d63b;
+    width: 24px;
+    height: 24px;
+    background: url("../img/arrow.png") no-repeat center;
+}
+
+.content .form .bml .bmi-span {
+    font-size: 15px;
+    float: left;
+    margin-left: 10px;
+}
+.content .form h3 {
+    margin: 0 0 10px;
+}
+
+.content .form .measure {
+    float: left;
+    margin-right: 50px;
+}
+
+.content .form .text1,
+.norm,
+.history {
+    font-size: 14px;
+}
+
+.content .form .unit {
+    width: 182px;
+    background: #eff8ff;
+    border: 1px solid #999;
+    margin: 10px 15px 0 50px;
+    box-sizing: border-box;
+    line-height: 30px;
+    padding-left: 3px;
+}
+
+.content .form select {
+    height: 20px;
+    margin-left: 43px !important;
+    text-align-last: center;
+    margin-bottom: 10px !important;
+}
+
+.content .form .wrap-button {
+    text-align: center;
+    width: 405px;
+}
+
+
+.content .form .wrap-button button {
+    width: 182px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.content .form .history {
+    width: 385px;
+    text-align: center;
+    margin-bottom: 10px;
+    /*border: 1px solid red;*/
+}
+.content .form .history label input[type='checkbox'],
+.content .form li label input[type='radio']
+{
+    vertical-align: middle;
+}
+.content .form li label {
+    margin-right: 3px;
+}
+.content .form li label input[type='radio'] {
+    margin-right: 3px;
+}
+/*中间右边内容*/
+.content .table {
+    float: right;
+    font-size: 14px;
+    width: 350px;
+    position: relative;
+}
+
+.content .table .table-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.content .table table {
+    width: 100%;
+    line-height: 26px;
+    background: #8DD8F8;
+    text-align: center;
+    border: 0;
+    border-spacing: 0px;
+}
+
+.content .table .table_arrow {
+    position: absolute;
+    top: 20%;
+    left: -30px;
+    display: none;
+}
+
+.content .table tr:nth-child(2) {
+    background: rgb(204, 204, 204);
+}
+
+.content .table tr:nth-child(3) {
+    background: #66cc00;
+}
+
+.content .table tr:nth-child(4) {
+    background: #FFF000;
+}
+
+.content .table tr:nth-child(5) {
+    background: #FF9900;
+}
+
+
+/*底部*/
+footer {
+    width: 900px;
+    margin: 30px auto 0;
+}
+
+footer h4 {
+    margin-bottom: 15px;
+}
+
+footer .record {
+    background: #7CB5EC;
+}
+
+footer .record table {
+    width: 100%;
+}
+
+footer .record table thead tr>td {
+    color: #FFF;
+    width: 16.666666666666668%;
+}
+
+footer .record table tr>td {
+    text-align: center;
+}
+/*empty 空的*/
+footer .wrap-record .empty {
+    text-align: center;
+    width: 100%;
+}
+
+footer .wrap-record .empty table {
+    width: 100%;
+} 
+
+footer .wrap-record .empty table  tr>td{
+    border: 1px solid #7CB5EC;
+    line-height: 180%;
+    width: 16.666666666666668%;
+}
+footer .wrap-record .empty table  tr>td:nth-child(2),
+footer .record table thead tr>td:nth-child(2)
+{
+    width: 25%;
+}
+footer .wrap-record .empty p {
+    line-height: 70px;
+}
+footer .wrap-record {
+    border: 1px solid #7CB5EC;
+    box-sizing: border-box;
+}
+
+footer .hint {
+    font-size: 11px;
+    text-align: right;
+    padding: 15px 0;
+    border-bottom: 1px solid rgb(163, 162, 162);
+}
+
+footer .copyright {
+    font-size: 10px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.pop-up {
+    height: 100vw;
+    background-color: #dadade;
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    line-height: 100vh;
+    text-align: center;
+    color: red;
+    font-weight: 800;
+    font-size: 40px;
+    display: none;
+}
