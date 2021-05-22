@@ -14,8 +14,6 @@ function  showPopUp(msg ,timeout = 1500) {
         pop_up.style.display = 'none'
     },timeout)
 }
-
-
 function calc(){
         x = weight.value / (height.value ** 2) * 10000; /*公式（BMI）=体重（kg）÷身高/2（m）*/
         digit = x.toFixed(1) /*结果保留一个小数点*/ //digit-数字
@@ -63,7 +61,7 @@ function down_timer(now = null) {
     let  d = nowTimer.getDate()//日
     d = d< 10 ? `0${d}`: d
     let  h = nowTimer.getHours()//时
-    h = h< 10 ? `0${d}`: h
+    h = h< 10 ? `0${h}`: h
     let  minute = nowTimer.getMinutes()//分
     minute = minute< 10 ? `0${minute}`: minute
     let  sed = nowTimer.getSeconds()//秒
@@ -82,31 +80,59 @@ function table() {
     let record = document.querySelector('#record') //record记载
     record.style.display = 'none' //记录消失
     count++
-    empty.innerHTML +=
-        ` <table>
-             <tr>
-                 <td>${count}</td>
-                 <td>${down_timer()}</td>
-                 <td>${height.value}</td>
-                 <td>${weight.value}</td>
-                 <td>${digit}</td>
-                 <td>
-                    <a href="javascript:void(0)">删除</a>
-                 </td>
-             </tr>
-         </table>`
-//删除
+    //存储我的数据 增加一个数组
+    let data = [ count, down_timer(), height.value, weight.value, digit,''] //最后一个数据给为空的
+    // 第二种办法 插入html
+    let tableS = document.createElement('table');
+    empty.append(tableS)
+    let tr = document.createElement('tr');
+    tableS.append(tr)
+    for (let i = 0; i < data.length; i++) {
+                let td = document.createElement('td');
+                tr.append(td)
+                td.innerHTML = data[i]
+    }
+    let a = document.createElement('a')
+    let tdss = tr.children //找到tr的最后一个td
+    tdss[5].append(a)  //插入a标签
+    a.setAttribute('href',"javascript:void(0)")
+    a.innerHTML = '删除'
+
+
+
+    //第一种办法 拼接html
+    // empty.innerHTML +=
+    //     ` <table>
+    //          <tr>
+    //              <td>${count}</td>
+    //              <td>${down_timer()}</td>
+    //              <td>${height.value}</td>
+    //              <td>${weight.value}</td>
+    //              <td>${digit}</td>
+    //              <td>
+    //                 <a href="javascript:void(0)">删除</a>
+    //              </td>
+    //          </tr>
+    //      </table>`
+
+    //删除
+
     let del = document.querySelectorAll('footer .wrap-record .empty table tr td a')
-    console.log(del)
     for (let i = 0; i < del.length; i++) {
         del[i].onclick = function () {
             //寻找它的父亲 table 此是this 指向 ===  del[i]
            // let tb = this.parentNode.parentNode.parentNode.parentNode
            // let tb = del[i].closest('table')
-            let tb = this.closest('table')
-            tb.remove()
+            let chuli = confirm('请问是否要删除呢?')
+            debugger
+            if (chuli) {
+                let tb = this.closest('table')
+                tb.remove()
+            }
+
         }
     }
+
 
 }
 
